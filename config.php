@@ -4,43 +4,16 @@ use Illuminate\Support\Str;
 
 return [
     'production' => false,
+
     'baseUrl' => 'http://stevenroland.test/',
+
     'siteName' => 'Steven Roland',
+
     'siteDescription' => 'Website description.',
+
     'siteAuthor' => 'Steven Roland',
 
     'collections' => [
-        'content/audio' => [
-            'author' => 'Steven Roland', // Default author, if not provided in a post
-            'sort' => '-date',
-            'path' => 'posts/audio/{filename}',
-        ],
-        'content/link' => [
-            'author' => 'Steven Roland', // Default author, if not provided in a post
-            'sort' => '-date',
-            'path' => 'posts/link/{filename}',
-        ],
-        'content/photo' => [
-            'author' => 'Steven Roland', // Default author, if not provided in a post
-            'sort' => '-date',
-            'path' => 'posts/photo/{filename}',
-        ],
-        'content/quote' => [
-            'author' => 'Steven Roland', // Default author, if not provided in a post
-            'sort' => '-date',
-            'path' => 'posts/quote/{filename}',
-        ],
-        'content/text' => [
-            'author' => 'Steven Roland', // Default author, if not provided in a post
-            'sort' => '-date',
-            'path' => 'posts/text/{filename}',
-        ],
-        'content/video' => [
-            'author' => 'Steven Roland', // Default author, if not provided in a post
-            'sort' => '-date',
-            'path' => 'posts/video/{filename}',
-        ],
-
         'content' => [
             'author' => 'Steven Roland', // Default author, if not provided in a post
             'sort' => '-date',
