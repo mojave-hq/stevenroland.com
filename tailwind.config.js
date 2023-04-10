@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
  content: require('fast-glob').sync([
@@ -12,5 +13,14 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addBase }) {
+      addBase({
+        // Used to hide alpine elements before being rendered.
+        '[x-cloak]': {
+          display: 'none !important'
+        },
+      })
+    }),
+  ],
 };

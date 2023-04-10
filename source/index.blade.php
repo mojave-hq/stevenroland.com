@@ -1,7 +1,15 @@
+---
+pagination:
+    collection: content
+    perPage: 5
+---
+
 @extends('_layouts.main')
 
-@section('body')
-<div class="p-8">
-    <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
-</div>
+@section('content')
+    <x-hero />
+
+    <div class="flow-root">
+        @include('_partials.posts', ['posts' => $pagination->items])
+    </div>
 @endsection
