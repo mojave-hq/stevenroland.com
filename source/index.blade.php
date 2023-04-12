@@ -1,6 +1,6 @@
 ---
 pagination:
-    collection: content
+    collection: posts
     perPage: 5
 ---
 

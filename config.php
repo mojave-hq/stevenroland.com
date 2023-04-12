@@ -19,7 +19,7 @@ return [
     ],
 
     'collections' => [
-        'content' => [
+        'posts' => [
             'author' => 'Steven Roland', // Default author, if not provided in a post
             'sort' => '-date',
             'path' => 'post/{filename}',

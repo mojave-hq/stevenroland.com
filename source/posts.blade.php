@@ -2,7 +2,7 @@
 title: Posts
 description: From inspiration to implementation, I write about web development, design, and more.
 pagination:
-    collection: content
+    collection: posts
     perPage: 15
 ---
 
