@@ -24,7 +24,7 @@
         </div>
         
         <div class="relative z-10">
-            <x-header :$page />
+            @include('_partials.header')
             
             <div
                 aria-hidden="true"
@@ -48,7 +48,7 @@
                 </div>
             </div>
 
-            <x-footer :$page />
+            @include('_partials.footer')
         </div>
     </body>
 </html>

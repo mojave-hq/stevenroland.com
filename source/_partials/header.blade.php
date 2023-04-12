@@ -1,7 +1,3 @@
-@props([
-    'page',
-])
-
 <header
     x-data="{
         showMobileMenu: false

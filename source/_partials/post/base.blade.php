@@ -1,7 +1,3 @@
-@props([
-    'post'
-])
-
 <article class="flex flex-col items-start justify-between max-w-xl">
     {{-- Date $ Category --}}
     <div class="flex items-center text-xs gap-x-4">
