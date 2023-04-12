@@ -9,15 +9,20 @@ return [
 
     'siteName' => 'Steven Roland',
 
-    'siteDescription' => 'Website description.',
+    'siteDescription' => 'Web developer, hiker, photographer.',
 
     'siteAuthor' => 'Steven Roland',
+
+    'build' => [
+        'source' => 'source',
+        'destination' => 'build_{env}',
+    ],
 
     'collections' => [
         'content' => [
             'author' => 'Steven Roland', // Default author, if not provided in a post
             'sort' => '-date',
-            'path' => 'posts/{filename}',
+            'path' => 'post/{filename}',
         ],
     ],
 
@@ -25,6 +30,7 @@ return [
     'getDate' => function ($page) {
         return Datetime::createFromFormat('U', $page->date);
     },
+
     'getExcerpt' => function ($page, $length = 255) {
         if ($page->excerpt) {
             return $page->excerpt;
@@ -52,6 +58,7 @@ return [
             ? preg_replace('/\s+?(\S+)?$/', '', $truncated) . '...'
             : $cleaned;
     },
+
     'isActive' => function ($page, $path) {
         return Str::endsWith(trimPath($page->getPath()), trimPath($path));
     },
