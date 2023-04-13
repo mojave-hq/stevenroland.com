@@ -1,6 +1,7 @@
 <div class="flex">
     <div class="flex-shrink-0 mr-4">
-        <x-icon svg="box.quote-alt-right" class="w-10 h-10" />
+        <x-icon svg="box.text" class="w-10 h-10" />
+
         @if ($post->tags)
             <div class="absolute z-10">
                 <x-badge>
@@ -18,16 +19,15 @@
     <article class="flex flex-col items-start justify-between max-w-xl">
         <div class="relative group">
             <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900">
-                {!! $post->getContent() !!}
+                <a
+                    href="{{ $post->getUrl() }}"
+                    title="Read more - {{ $post->title }}">
+                    {{ $post->title }}
+                </a>
             </h3>
-        </div>
-        <div class="relative flex items-center mt-4 gap-x-4">
-            <div class="text-sm leading-6">
-                <p class="font-semibold text-gray-900">
-                    &mdash;
-                    {{ $post->author }}
-                </p>
-            </div>
+            <p class="mt-5 text-sm leading-6 text-gray-600 line-clamp-3">
+                {!! $post->getExcerpt(200) !!}
+            </p>
         </div>
     </article>
 </div>

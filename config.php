@@ -21,8 +21,9 @@ return [
     'collections' => [
         'posts' => [
             'author' => 'Steven Roland', // Default author, if not provided in a post
-            'sort' => '-date',
-            'path' => 'post/{filename}',
+            'path' => fn ($page) => $page->title
+                ? 'posts/' . Str::slug($page->title)
+                : 'posts/' . Str::slug($page->getFilename()),
         ],
     ],
 

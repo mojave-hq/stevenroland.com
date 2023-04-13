@@ -36,7 +36,7 @@
             </div>
 
             <div class="px-6 py-24 mx-auto sm:py-32 max-w-7xl lg:px-8">
-                @yield('content')
+                @yield('body')
             </div>
 
             <div

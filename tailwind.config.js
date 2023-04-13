@@ -29,6 +29,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('@tailwindcss/typography'),
     plugin(function({ addBase }) {
       addBase({
         // Used to hide alpine elements before being rendered.

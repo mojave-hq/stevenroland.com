@@ -1,6 +1,6 @@
 ---
-title: Posts
-description: From inspiration to implementation, I write about web development, design, and more.
+title: Quotes
+description: A collection of quotes I've found interesting.
 pagination:
     collection: posts
     perPage: 15
@@ -17,5 +17,5 @@ pagination:
         @endif
     </div>
 
-    @include('_partials.posts', ['posts' => $pagination->items])
+    @include('_partials.posts', ['posts' => $pagination->items->filter(fn ($post) => $post->type === 'quote')])
 @endsection

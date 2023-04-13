@@ -6,8 +6,8 @@ pagination:
 
 @extends('_layouts.main')
 
-@section('content')
-    <x-hero />
+@section('body')
+    @include('_partials.hero')
 
     <div class="flow-root">
         @include('_partials.posts', ['posts' => $pagination->items])
