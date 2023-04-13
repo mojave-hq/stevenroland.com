@@ -10,7 +10,14 @@
         <title>{{ $page->title ?  $page->title . ' | ' : '' }}{{ $page->siteName }}</title>
 
         @if ($page->production)
-            <!-- Insert analytics code here -->
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4Y4LFZ08H"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-M4Y4LFZ08H');
+            </script>
         @endif
 
         <link rel="preconnect" href="https://rsms.me">
