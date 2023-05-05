@@ -3,7 +3,7 @@ title: Posts
 description: From inspiration to implementation, I write about web development, design, and more.
 pagination:
     collection: posts
-    perPage: 15
+    perPage: 10
 ---
 
 @extends('_layouts.main')
@@ -18,4 +18,8 @@ pagination:
     </div>
 
     @include('_partials.posts', ['posts' => $pagination->items])
+
+    @if ($pagination->pages->count() > 1)
+        <x-paginator :pagination="$pagination" class="justify-center" />
+    @endif
 @endsection

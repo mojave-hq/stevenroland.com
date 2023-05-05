@@ -3,7 +3,7 @@ title: Quotes
 description: A collection of quotes I've found interesting.
 pagination:
     collection: posts
-    perPage: 15
+    perPage: 10
 ---
 
 @extends('_layouts.main')
@@ -18,4 +18,8 @@ pagination:
     </div>
 
     @include('_partials.posts', ['posts' => $pagination->items->filter(fn ($post) => $post->type === 'quote')])
+
+    @if ($pagination->pages->count() > 1)
+        <x-paginator :pagination="$pagination" class="justify-center" />
+    @endif
 @endsection
