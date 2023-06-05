@@ -7,6 +7,7 @@
         <div class="flex flex-1">
             <div class="hidden lg:flex lg:gap-x-12">
                 <x-header.desktop-link href="/posts" value="Posts" />
+                <x-header.desktop-link href="/resume" value="Résumé" />
             </div>
             <div class="flex lg:hidden">
                 <button
@@ -62,6 +63,7 @@
             </div>
             <div class="mt-6 space-y-2">
                 <x-header.mobile-link href="/posts" value="Posts" />
+                <x-header.mobile-link href="/resume" value="Résumé" />
             </div>
         </div>
     </div>
