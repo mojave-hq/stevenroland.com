@@ -24,8 +24,7 @@
             <x-icon svg="brand.logoicon" class="h-8 h8" />
         </a>
         <div class="flex justify-end flex-1">
-            {{-- <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span
-                    aria-hidden="true">&rarr;</span></a> --}}
+            <x-search />
         </div>
     </nav>
 
