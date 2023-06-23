@@ -1,5 +1,6 @@
 <div
     x-data="search"
+    x-on:keydown.window.prevent.ctrl.slash="showInput()"
     class="relative z-10"
     role="dialog"
     aria-modal="true">
@@ -21,7 +22,7 @@
         x-transition:leave="ease-in duration-200"
         x-transition:leave-start="opacity-100"
         x-transition:leave-end="opacity-0"
-        class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-25"></div>
+        class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-25 backdrop-blur-sm"></div>
 
     <div
         x-show="searching"
@@ -73,7 +74,7 @@
                             x-on:mousedown.prevent
                             x-bind:key="index"
                             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                            <span x-text="result.item.title"></span>
+                            <span x-text="result.item.title" class="font-semibold text-gray-900"></span>
                             <span class="block my-1 text-sm font-normal text-gray-700" x-html="result.item.snippet"></span>
                         </a>
                     </li>
