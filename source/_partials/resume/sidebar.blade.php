@@ -14,7 +14,7 @@
 
         <div class="prose-sm">
             <p>
-                For the last decade I have been focused on both front-end and back-end 
+                Since 2011 I have been focused on both front-end and back-end 
                 web development to offer solutions that are thoughtful, personal, and 
                 deeply valuable across the finance, education, and retail industries.
             </p>

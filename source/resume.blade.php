@@ -29,7 +29,7 @@ headshot: /assets/images/resume/steven.webp
                         'User Interface Design', 'User Research', 'User Experience Engineering',
                     ] as $skill)
                         <li class="py-4 md:px-4">
-                            <p class="px-6 py-2 font-medium transition duration-700 ease-in-out bg-gray-100 rounded-xl text-primary-500">
+                            <p class="px-6 py-2 font-medium bg-gray-100/50 backdrop-blur-sm rounded-xl text-primary-600">
                                 {{ $skill }}
                             </p>
                         </li>
