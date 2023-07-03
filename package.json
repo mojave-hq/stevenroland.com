@@ -9,7 +9,7 @@
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.3",
         "@tailwindcss/typography": "^0.5.9",
-        "alpinejs": "^3.12.2",
+        "alpinejs": "^3.12.3",
         "axios": "^1.4.0",
         "fuse.js": "^6.6.2",
         "highlight.js": "^11.8.0",
